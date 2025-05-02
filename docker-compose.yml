@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: .  
+    container_name: agn-v2ray-backend
+    command: >
+      uvicorn app.main:app 
+      --host 0.0.0.0 
+      --port 8443 
+      --ssl-certfile fullchain.pem 
+      --ssl-keyfile privkey.pem
+    ports:
+      - "8443:8443"   
+    environment:
+      - PYTHONUNBUFFERED=1   
+      - APP_ENV=production  
+      - LOG_LEVEL=info      
+      - API_URL=https://backend:8443
+      - BOT_TOKEN=7798305127:AAGmK30Uwk8O1ES9lvGOXghWoYm03Cd0lrI
+      - CHANNEL_USERNAME=@khaledagn
+      - WEBHOOK=https://www.khaledagn.me:8443
+      - REMOTE_URLS_JSON=https://www.khaledagn.me/urls.json
+    restart: unless-stopped  # 
+    networks:
+      - agn-network
+ 
+networks:
+  agn-network:
+    driver: bridge   
