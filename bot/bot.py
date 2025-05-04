@@ -2,7 +2,7 @@ from bot import get_bot_updater
 from bot.handlers import start, send_configs
 from telegram.ext import CommandHandler, CallbackQueryHandler
 
-BOT_TOKEN = "7921487485:AAE7-ur5VKH20Emg7Pj1i8uykMpknemIrqo"
+BOT_TOKEN = "your_bot_token"
 
 def main():
     updater = get_bot_updater(BOT_TOKEN)
