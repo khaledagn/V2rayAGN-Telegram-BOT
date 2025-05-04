@@ -19,9 +19,6 @@ A lightweight Telegram bot that helps users quickly fetch **V2Ray config links**
 
 This is an early version — I'm actively improving features and fixing bugs. Your feedback is welcome!
 
-## 📲 Try it out
-
-[Click here to start using the bot](https://t.me/agnv2ray_bot)
 
 ## 🧩 Tech Stack
 
